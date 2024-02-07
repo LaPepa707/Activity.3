@@ -51,7 +51,7 @@
             Console.WriteLine("6 - MCD");
             Console.WriteLine("7 - Hulukulu y Bulukulu");
             Console.WriteLine("8 - Suma de dígitos");
-            Console.WriteLine("0 - EXIT");
+            Console.WriteLine("0 - EXIT") ;
         }
 
     }
