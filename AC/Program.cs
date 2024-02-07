@@ -1,4 +1,6 @@
-﻿namespace AC
+﻿using System.Linq.Expressions;
+
+namespace AC
 {
     internal class Program
     {
@@ -64,6 +66,54 @@
             Console.WriteLine("9 -  DEPORTES");
             Console.WriteLine("10 - HISTORIA");
             Console.WriteLine("0 - EXIT");
+        }
+
+        public static void YARYNA()
+        {
+            string resposta;
+            bool respostaCorrecta;
+
+            while (!respostaCorrecta)
+            {
+                try
+                {
+                    Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+                    Console.WriteLine("a) Chimpancé b) Gibón c) Tamarino d) Lémur");
+                    resposta = Console.ReadLine();
+                    switch (resposta)
+                    {
+                        case "b":
+                        case "c":
+                        case "d":
+                            Console.WriteLine("Te has equivocado!!");
+                            respostaCorrecta = false;
+                            
+                        case "a":
+                            Console.WriteLine("Correcto!!");
+                            respostaCorrecta = true;
+
+                    }
+                }
+                catch
+                {
+                    throw new Exception("Oh oh algo no ha ido como se esperava, vuelve a intentarlo!");
+
+                }
+            }
+
+
+
+
+            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+
+
+
+
+
         }
 
     }
