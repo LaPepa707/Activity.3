@@ -59,8 +59,8 @@ namespace AC
             Console.WriteLine("1 - ANIMALES");
             Console.WriteLine("2 - CAPITALES");
             Console.WriteLine("3 - CANCIONES");
-            Console.WriteLine("5 - FUTBOLISTAS");
-            Console.WriteLine("6 - ENTRENADORES");
+            Console.WriteLine("4 - FUTBOLISTAS");
+            Console.WriteLine("5 - ENTRENADORES");
             Console.WriteLine("7 - ESTADIOS");
             Console.WriteLine("8 - INSTRUMENTOS MUSICALES");
             Console.WriteLine("9 -  DEPORTES");
@@ -71,8 +71,7 @@ namespace AC
         public static void YARYNA()
         {
             string resposta;
-            bool respostaCorrecta;
-
+            bool respostaCorrecta = false;
             while (!respostaCorrecta)
             {
                 try
@@ -102,22 +101,22 @@ namespace AC
 
                 }
             }
-
-
-
-
             Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
             Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
             Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
             Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
             Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-
-
-
-
-
-
         }
+        /// <summary>
+        /// FUNCION CON LOS TOPICS DE PRESLAVA
+        /// </summary>
+        public static void PRESLAVA() 
+        {
+            Console.ReadKey();
+            if ()
+            {
 
+            }
+        }
     }
 }
