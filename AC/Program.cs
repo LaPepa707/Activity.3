@@ -53,6 +53,7 @@
             Console.WriteLine("8 - INSTRUMENTOS MUSICALES");
             Console.WriteLine("9 -  DEPORTES");
             Console.WriteLine("10 - HISTORIA");
+            Console.WriteLine("10 - HISTORIA");
             Console.WriteLine("0 - EXIT");
         }
 
