@@ -26,17 +26,27 @@
                 switch (tecla.Key)
                 {
                     case ConsoleKey.D1:
+                    case ConsoleKey.D2:
+                    case ConsoleKey.D3:
                         YARYNA();
                         break;
-                    case ConsoleKey.D2:
+
+                    case ConsoleKey.D4:
+                    case ConsoleKey.D5:
+                    case ConsoleKey.D6:
                         FERNANDO();
                         break;
-                    case ConsoleKey.D3:
+
+                    case ConsoleKey.D7:
+                    case ConsoleKey.D8:
+                    case ConsoleKey.D9:
                         PRESLAVA();
                         break;
+
                     case ConsoleKey.D0:
                         MsgNextScreen("Error. Prem una tecla per tornar al menú...");
                         break;
+
                 }
             } while (tecla.Key != ConsoleKey.D0);
         }
