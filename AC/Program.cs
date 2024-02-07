@@ -87,10 +87,12 @@ namespace AC
                         case "d":
                             Console.WriteLine("Te has equivocado!!");
                             respostaCorrecta = false;
+                            break;
                             
                         case "a":
                             Console.WriteLine("Correcto!!");
                             respostaCorrecta = true;
+                            break;
 
                     }
                 }
