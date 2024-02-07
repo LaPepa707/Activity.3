@@ -71,50 +71,45 @@ namespace AC
         public static void YARYNA()
         {
             string resposta;
-            bool respostaCorrecta;
+            bool respostaCorrecta = false;
 
             while (!respostaCorrecta)
             {
+                Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+                Console.WriteLine("a) Chimpancé b) Gibón c) Tamarino d) Lémur");
+
+
                 try
                 {
-                    Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-                    Console.WriteLine("a) Chimpancé b) Gibón c) Tamarino d) Lémur");
-                    resposta = Console.ReadLine();
-                    switch (resposta)
+                    char respostaChar = Convert.ToChar(Console.ReadLine());
+
+                    switch (respostaChar)
                     {
-                        case "b":
-                        case "c":
-                        case "d":
-                            Console.WriteLine("Te has equivocado!!");
-                            respostaCorrecta = false;
-                            break;
-                            
-                        case "a":
-                            Console.WriteLine("Correcto!!");
+                        case 'a':
                             respostaCorrecta = true;
                             break;
 
+                        case 'b':
+                        case 'c':
+                        case 'd':
+                            Console.WriteLine("Te has equivocado!!");
+                            respostaCorrecta = false;
+                            break;
+
+                        default:
+                            Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
+                            break;
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    throw new Exception("Oh oh algo no ha ido como se esperava, vuelve a intentarlo!");
-
+                    Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
                 }
             }
 
-
-
-
-            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-            Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-
-
-
-
+            Console.WriteLine("Correcto!!");
+            Console.WriteLine("Presiona cualquier tecla para continuar...");
+            Console.ReadKey();
 
         }
 
