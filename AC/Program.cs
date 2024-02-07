@@ -44,13 +44,15 @@
         public static void ShowOptions()
         {
             Console.Clear();
-            Console.WriteLine("1 - CUSTOMERS");
-            Console.WriteLine("2 - PROVIDERS");
-            Console.WriteLine("3 - INVOICES");
-            Console.WriteLine("5 - DATA");
-            Console.WriteLine("6 - MCD");
-            Console.WriteLine("7 - Hulukulu y Bulukulu");
-            Console.WriteLine("8 - Suma de dígitos");
+            Console.WriteLine("1 - ANIMALES");
+            Console.WriteLine("2 - CAPITALES");
+            Console.WriteLine("3 - CANCIONES");
+            Console.WriteLine("5 - FUTBOLISTAS");
+            Console.WriteLine("6 - ENTRENADORES");
+            Console.WriteLine("7 - ESTADIOS");
+            Console.WriteLine("8 - INSTRUMENTOS MUSICALES");
+            Console.WriteLine("9 -  DEPORTES");
+            Console.WriteLine("10 - HISTORIA");
             Console.WriteLine("0 - EXIT");
         }
 
