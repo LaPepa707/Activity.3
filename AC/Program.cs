@@ -110,12 +110,152 @@ namespace AC
         /// <summary>
         /// FUNCION CON LOS TOPICS DE PRESLAVA
         /// </summary>
-        public static void PRESLAVA() 
+        #region PRESLAVA
+        public static void PRESLAVA()
         {
-            if (Console.ReadKey().Key == ConsoleKey.D7)
-            {
+            if (Console.ReadKey().Key == ConsoleKey.D7) InstrumentosMusicales();
 
+            if (Console.ReadKey().Key == ConsoleKey.D8) Deportes();
+
+            if (Console.ReadKey().Key == ConsoleKey.D9) Historia();
+
+        }
+        /// <summary>
+        /// Funcion con las preguntas del tópic historia
+        /// </summary>
+        #region Historia
+        public static void Historia()
+        {
+            Pregunta1Historia();
+            Pregunta2Historia();
+            Pregunta3Historia();
+            Pregunta4Historia();
+            Pregunta5Historia();
+        }
+
+        public static void Pregunta4Historia()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("Napoleon fue un rey frances");
+            Console.Write("a) Si   b) No -->");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "b" || respuesta == "B")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Si estuvo al mando de Francia, pero NO fue un rey");
             }
         }
+
+        public static void Pregunta3Historia()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("Japon, durante la segunda guerra mundial, estuvo en el bando de los aliados");
+            Console.Write("a) Si   b) No -->");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "b" || respuesta == "B")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Uff... casi casi, pero NO");
+            }
+        }
+
+        public static void Pregunta2Historia()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("Existio una tal Guerra de los balcanes?");
+            Console.Write("a) Si   b) No -->");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "a" || respuesta == "A")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Emm... Estudia un poquito de historia, no te vendía mal");
+            }
+        }
+
+        public static void Pregunta1Historia()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("Cual fue el mayor acontecimiento histórico en el año 1939?");
+            Console.Write("a) Segunda guerra mundial    b) Primera guerra mundial   c) Muerte de Kenedi -->");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "a" || respuesta == "A")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Lo siento... La respuesta correcta es la A");
+            }
+        }
+        #endregion
+        /// <summary>
+        /// Funcion con las preguntas del tópic deportes
+        /// </summary>
+        #region Deportes
+        public static void Deportes()
+        {
+            Pregunta1Deportes();
+            Pregunta2Deportes();
+            Pregunta3Deportes();
+            Pregunta4Deportes();
+            Pregunta5Deportes();
+        }
+        #endregion
+        /// <summary>
+        /// Funcion con las preguntas del tópic Instrumentos Musicales
+        /// </summary>
+        #region Instrumentos Musicales
+        public static void InstrumentosMusicales()
+        {
+            Pregunta1InstrumentosMusicales();
+            Pregunta2InstrumentosMusicales();
+            Pregunta3InstrumentosMusicales();
+            Pregunta4InstrumentosMusicales();
+            Pregunta5InstrumentosMusicales();
+        }
+        #endregion
+        #endregion
+
     }
 }
