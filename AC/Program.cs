@@ -61,10 +61,10 @@ namespace AC
             Console.WriteLine("3 - CANCIONES");
             Console.WriteLine("4 - FUTBOLISTAS");
             Console.WriteLine("5 - ENTRENADORES");
-            Console.WriteLine("7 - ESTADIOS");
-            Console.WriteLine("8 - INSTRUMENTOS MUSICALES");
-            Console.WriteLine("9 -  DEPORTES");
-            Console.WriteLine("10 - HISTORIA");
+            Console.WriteLine("6 - ESTADIOS");
+            Console.WriteLine("7 - INSTRUMENTOS MUSICALES");
+            Console.WriteLine("8 -  DEPORTES");
+            Console.WriteLine("9 - HISTORIA");
             Console.WriteLine("0 - EXIT");
         }
 
@@ -112,8 +112,7 @@ namespace AC
         /// </summary>
         public static void PRESLAVA() 
         {
-            Console.ReadKey();
-            if ()
+            if (Console.ReadKey().Key == ConsoleKey.D7)
             {
 
             }
