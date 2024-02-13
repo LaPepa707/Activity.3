@@ -70,47 +70,203 @@ namespace AC
 
         public static void YARYNA()
         {
+
             string resposta;
             bool respostaCorrecta = false;
+            bool Final = false;
 
-            while (!respostaCorrecta)
+            while (!Final)
             {
-                Console.WriteLine("1.¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
-                Console.WriteLine("a) Chimpancé b) Gibón c) Tamarino d) Lémur");
 
-
-                try
+                while (!respostaCorrecta)
                 {
-                    char respostaChar = Convert.ToChar(Console.ReadLine());
 
-                    switch (respostaChar)
+                    Console.WriteLine("1. ¿Cuál de las siguientes especies de primates es conocida por su capacidad de fabricar y utilizar herramientas?");
+                    Console.WriteLine("a) Chimpancé b) Gibón c) Tamarino d) Lémur");
+
+                    try
                     {
-                        case 'a':
-                            respostaCorrecta = true;
-                            break;
+                        while (!respostaCorrecta)
+                        {
+                            char respostaChar = Convert.ToChar(Console.ReadLine());
 
-                        case 'b':
-                        case 'c':
-                        case 'd':
-                            Console.WriteLine("Te has equivocado!!");
-                            respostaCorrecta = false;
-                            break;
+                            switch (respostaChar)
+                            {
+                                case 'a':
+                                    respostaCorrecta = true;
+                                    Console.WriteLine("Correcto!!");
+                                    break;
 
-                        default:
-                            Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
-                            break;
+                                case 'b':
+                                case 'c':
+                                case 'd':
+                                    throw new Exception("Te has equivocado");
+                                    respostaCorrecta = false;
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
+                                    break;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
                     }
                 }
-                catch (Exception ex)
+
+                respostaCorrecta = false;
+
+                while (!respostaCorrecta) //PREGUNTA 2
                 {
-                    Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
+
+                    Console.WriteLine("2. ¿Qué adaptación física ayuda a los camaleones a camuflarse en su entorno?");
+                    Console.WriteLine("a) Cola larga   b) Cambio de color en la piel   c) Pico largo  d) Orejas grandes");
+
+                    try
+                    {
+                        char respostaChar = Convert.ToChar(Console.ReadLine());
+
+                        switch (respostaChar)
+                        {
+                            case 'b':
+                                respostaCorrecta = true;
+                                break;
+
+                            case 'a':
+                            case 'c':
+                            case 'd':
+                                throw new Exception("Te has equivocado");
+                                respostaCorrecta = false;
+                                break;
+
+                            default:
+                                Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
+                    }
+
+                }
+
+                respostaCorrecta = false;
+
+                while (!respostaCorrecta) //PREGUNTA 3
+                {
+
+
+                    Console.WriteLine("3. ¿En qué bioma podrías encontrar pingüinos emperadores?");
+                    Console.WriteLine("a) Desierto\r\n b) Bosque tropical\r\n c) Tundra\r\n d) Selva");
+
+                    try
+                    {
+                        char respostaChar = Convert.ToChar(Console.ReadLine());
+
+                        switch (respostaChar)
+                        {
+                            case 'c':
+                                respostaCorrecta = true;
+                                break;
+
+                            case 'a':
+                            case 'b':
+                            case 'd':
+                                throw new Exception("Te has equivocado");
+                                respostaCorrecta = false;
+                                break;
+
+                            default:
+                                Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
+                    }
+
+                }
+
+                respostaCorrecta = false;
+
+                while (!respostaCorrecta)//PREGUNTA 4
+                {
+                    Console.WriteLine("4 .¿Qué animal es conocido por construir intrincados nidos en forma de colmena?");
+                    Console.WriteLine("a) Elefante\r\nb) Abeja\r\nc) Araña\r\nd) Delfín");
+
+                    try
+                    {
+                        char respostaChar = Convert.ToChar(Console.ReadLine());
+
+                        switch (respostaChar)
+                        {
+                            case 'b':
+                                respostaCorrecta = true;
+                                break;
+
+                            case 'a':
+                            case 'c':
+                            case 'd':
+                                throw new Exception("Te has equivocado");
+                                respostaCorrecta = false;
+                                break;
+
+                            default:
+                                Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
+                    }
+                }
+
+                respostaCorrecta = false;
+
+                while (!respostaCorrecta)//PREGUNTA 5
+                {
+
+                    Console.WriteLine("5 .¿Qué animal tiene una lengua tan larga que puede alcanzar su cráneo y se utiliza para alimentarse de insectos");
+                    Console.WriteLine("a) Jirafa\r\nb) Oso\r\nc) Camaleón\r\nd) Oso hormiguero");
+
+                    try
+                    {
+                        char respostaChar = Convert.ToChar(Console.ReadLine());
+
+                        switch (respostaChar)
+                        {
+                            case 'd':
+                                respostaCorrecta = true;
+                                Final = true;
+                                break;
+
+                            case 'a':
+                            case 'c':
+                            case 'b':
+                                throw new Exception("Te has equivocado");
+                                respostaCorrecta = false;
+                                break;
+
+                            default:
+                                Console.WriteLine("Por favor, ingresa una respuesta válida (a, b, c o d).");
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Oh oh algo no ha ido como se esperaba, vuelve a intentarlo!");
+                    }
+                    Console.WriteLine("Muy bien, has acabado");
+                    Console.WriteLine("Presiona cualquier tecla para continuar...");
+                    Console.ReadKey();
+
                 }
             }
-
-            Console.WriteLine("Correcto!!");
-            Console.WriteLine("Presiona cualquier tecla para continuar...");
-            Console.ReadKey();
-
         }
 
     }
