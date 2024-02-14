@@ -42,13 +42,12 @@ namespace AC
                     case ConsoleKey.D7:
                     case ConsoleKey.D8:
                     case ConsoleKey.D9:
-                        PRESLAVA();
+                        PRESLAVA(tecla);
                         break;
 
                     case ConsoleKey.D0:
                         MsgNextScreen("Error. Prem una tecla per tornar al menú...");
                         break;
-
                 }
             } while (tecla.Key != ConsoleKey.D0);
         }
@@ -63,9 +62,14 @@ namespace AC
             Console.WriteLine("5 - ENTRENADORES");
             Console.WriteLine("6 - ESTADIOS");
             Console.WriteLine("7 - INSTRUMENTOS MUSICALES");
-            Console.WriteLine("8 -  DEPORTES");
+            Console.WriteLine("8 - DEPORTES");
             Console.WriteLine("9 - HISTORIA");
             Console.WriteLine("0 - EXIT");
+        }
+        public static void MsgNextScreen(string msg)
+        {
+            Console.WriteLine(msg);
+            Console.ReadKey();
         }
 
         public static void YARYNA()
@@ -271,13 +275,14 @@ namespace AC
         /// FUNCION CON LOS TOPICS DE PRESLAVA
         /// </summary>
         #region PRESLAVA
-        public static void PRESLAVA()
+        public static void PRESLAVA(ConsoleKeyInfo key)
         {
-            if (Console.ReadKey().Key == ConsoleKey.D7) InstrumentosMusicales();
 
-            if (Console.ReadKey().Key == ConsoleKey.D8) Deportes();
+            if (key.Key == ConsoleKey.D7) InstrumentosMusicales();
 
-            if (Console.ReadKey().Key == ConsoleKey.D9) Historia();
+            if (key.Key == ConsoleKey.D8) Deportes();
+
+            if (key.Key == ConsoleKey.D9) Historia();
 
         }
         /// <summary>
@@ -293,13 +298,39 @@ namespace AC
             Pregunta5Historia();
         }
 
+        public static void Pregunta5Historia()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿Quienes fueron los miembros que conformaban los aliados?");
+            Console.Write("a) Inglaterra, EEUU, y la URSS   b) Inglaterra, Japón, y la URSS  c) Inglaterra, EEUU, la URSS y FRancia  d) Alemania, Italia y Japón -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "c" || respuesta == "C")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("No, no, INCORRECTO");
+            }
+
+            MsgNextScreen("PRESIONA UNA TECLA PARA VOLVER AL MENU");
+        }
+
         public static void Pregunta4Historia()
         {
             string respuesta;
             bool correcta = false;
 
-            Console.WriteLine("Napoleon fue un rey frances");
-            Console.Write("a) Si   b) No -->");
+            Console.WriteLine("Napoleón Bonaparte fue...");
+            Console.Write("a) un rey   b) un emperador  c) un Papa  d) un comerciante -->   ");
             respuesta = Console.ReadLine();
 
             if (respuesta == "b" || respuesta == "B")
@@ -313,7 +344,7 @@ namespace AC
             }
             else
             {
-                Console.WriteLine("Si estuvo al mando de Francia, pero NO fue un rey");
+                Console.WriteLine("Me da a mi que no. INCORRECTO");
             }
         }
 
@@ -322,8 +353,8 @@ namespace AC
             string respuesta;
             bool correcta = false;
 
-            Console.WriteLine("Japon, durante la segunda guerra mundial, estuvo en el bando de los aliados");
-            Console.Write("a) Si   b) No -->");
+            Console.WriteLine("Japon, durante la segunda guerra mundial, estuvo del bando...");
+            Console.Write("a) de los aliados   b) de las potencias del eje   c) de las potencias aliadas    d) del eje-->   ");
             respuesta = Console.ReadLine();
 
             if (respuesta == "b" || respuesta == "B")
@@ -346,8 +377,8 @@ namespace AC
             string respuesta;
             bool correcta = false;
 
-            Console.WriteLine("Existio una tal Guerra de los balcanes?");
-            Console.Write("a) Si   b) No -->");
+            Console.WriteLine("¿En que año comenzó la primera guerra de los balcanes?");
+            Console.Write("a) 1912   b) 1913    c) 1909     d) 1980 -->     ");
             respuesta = Console.ReadLine();
 
             if (respuesta == "a" || respuesta == "A")
@@ -371,7 +402,7 @@ namespace AC
             bool correcta = false;
 
             Console.WriteLine("Cual fue el mayor acontecimiento histórico en el año 1939?");
-            Console.Write("a) Segunda guerra mundial    b) Primera guerra mundial   c) Muerte de Kenedi -->");
+            Console.Write("a) Segunda guerra mundial    b) Primera guerra mundial   c) Muerte de Kenedi     d) Muerte de la Princesa Diana -->      ");
             respuesta = Console.ReadLine();
 
             if (respuesta == "a" || respuesta == "A")
@@ -401,6 +432,128 @@ namespace AC
             Pregunta4Deportes();
             Pregunta5Deportes();
         }
+
+        public static void Pregunta5Deportes()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿Qué deporte se creo en Jápón?");
+            Console.Write("a) Voley   b) Muay Thai  c) Taekwondo  d) Judo -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "d" || respuesta == "D")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("No, no, INCORRECTO");
+            }
+
+            MsgNextScreen("PRESIONA UNA TECLA PARA VOLVER AL MEN");
+        }
+
+        public static void Pregunta4Deportes()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿En donde se creó el fútbol?");
+            Console.Write("a) España   b) China  c) Índia  d) Egipto -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "b" || respuesta == "B")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("¡¡¡¡¡INCORRECTO!!!!");
+            }
+        }
+
+        public static void Pregunta3Deportes()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿Y la equitación?");
+            Console.Write("a) 1046   b) 1283  c) 1900  d) 1539 -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "d" || respuesta == "D")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Que pena, pero es incorrecto");
+            }
+        }
+
+        public static void Pregunta2Deportes()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿En qué fecha se creó el basquet?");
+            Console.Write("a) 1891   b) 1786  c) 1910  d) 1590 -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "a" || respuesta == "A")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("No amigo, no");
+            }
+        }
+
+        public static void Pregunta1Deportes()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿En que deporte la pelota no puede tocar el suelo?");
+            Console.Write("a) Basquet   b) Tenis  c) Voley  d) Equitación -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "c" || respuesta == "C")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("No, no, INCORRECTO");
+            }
+        }
         #endregion
         /// <summary>
         /// Funcion con las preguntas del tópic Instrumentos Musicales
@@ -413,6 +566,128 @@ namespace AC
             Pregunta3InstrumentosMusicales();
             Pregunta4InstrumentosMusicales();
             Pregunta5InstrumentosMusicales();
+        }
+
+        public static void Pregunta1InstrumentosMusicales()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿Cual es el instrumento más tocado?");
+            Console.Write("a) Triángulo   b) Guitarra  c) Piano  d) Flauta -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "b" || respuesta == "B")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Uy uy uy, me da que no");
+            }
+        }
+
+        public static void Pregunta2InstrumentosMusicales()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("Las maracas son de tipo...");
+            Console.Write("a) percusión   b) cuerda  c) eléctrica  d) viento -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "a" || respuesta == "A")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("INCORRECTO");
+            }
+        }
+
+        public static void Pregunta3InstrumentosMusicales()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿Cual de los siguientes instrumentos es de percusión?");
+            Console.Write("a) Piano   b) Guitarra Eléctrica  c) Triángulo  d) Flauta -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "c" || respuesta == "C")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Ay ay ayyyyyy, NO");
+            }
+        }
+
+        public static void Pregunta4InstrumentosMusicales()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("¿Cuantos tipos de guirtarras hay?");
+            Console.Write("a) 1   b) 4  c) 6  d) 3 -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "d" || respuesta == "D")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("No, NO, NOOOO");
+            }
+        }
+
+        private static void Pregunta5InstrumentosMusicales()
+        {
+            string respuesta;
+            bool correcta = false;
+
+            Console.WriteLine("El piano es un instrumento de...");
+            Console.Write("a) cuerda   b) viento  c) percusión  d) eléctrico -->    ");
+            respuesta = Console.ReadLine();
+
+            if (respuesta == "a" || respuesta == "A")
+            {
+                correcta = true;
+            }
+
+            if (correcta)
+            {
+                Console.WriteLine("Perfecto!!!! ES CORRECTA");
+            }
+            else
+            {
+                Console.WriteLine("Me temo que es incorrecta tu respuesta");
+            }
+
+            MsgNextScreen("PRESIONA UNA TECLA PARA VOLVER AL MEN");
         }
         #endregion
         #endregion
