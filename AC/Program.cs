@@ -419,8 +419,8 @@ namespace AC
 
             Console.WriteLine("¿Qué equipo juega como local en el Signal Iduna Parck?");
             Console.WriteLine("a) Fc Bayern Munchen b) Girona Fc c) Borussia Dortmund d) RB Leipzig");
-            string respuestaEntrenadores3 = Console.ReadLine();
-            bool respuestaCorrecta3 = false;
+            string respuestaEntrenadores4 = Console.ReadLine();
+            bool respuestaCorrecta4 = false;
             switch (respuestaEntrenadores3.ToLower())
             {
                 case "a":
