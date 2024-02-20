@@ -69,7 +69,7 @@ namespace AC
         }
 
 
-        //A PARTIR DE AQUI NO BORRAR NADA
+        //NO BORRAR NADA
         public static void YARYNA(ConsoleKeyInfo tecla)
         {
             string resposta;
@@ -118,6 +118,7 @@ namespace AC
                 }
                 Console.Clear();
                 respostaCorrecta = false;
+                //NO BORRAR NADA
 
                 while (!respostaCorrecta) //PREGUNTA 2
                 {
@@ -155,7 +156,7 @@ namespace AC
                 }
                 Console.Clear();
                 respostaCorrecta = false;
-
+                //NO BORRAR NADA
                 while (!respostaCorrecta) //PREGUNTA 3
                 {
 
@@ -193,7 +194,7 @@ namespace AC
                 }
                 Console.Clear();
                 respostaCorrecta = false;
-
+                //NO BORRAR NADA
                 while (!respostaCorrecta)//PREGUNTA 4
                 {
                     Console.WriteLine("4 .¿Qué animal es conocido por construir intrincados nidos en forma de colmena?");
@@ -228,7 +229,7 @@ namespace AC
                 }
                 Console.Clear();
                 respostaCorrecta = false;
-
+                //NO BORRAR NADA
                 while (!respostaCorrecta)//PREGUNTA 5
                 {
 
@@ -269,6 +270,7 @@ namespace AC
                 }
             }
         }
+        //NO BORRAR NADA
         public static void CapitalesP()
         {
             string resposta;
@@ -467,6 +469,7 @@ namespace AC
                 }
             }
         }
+        //NO BORRAR NADA
         public static void CancionesP()
         {
 
