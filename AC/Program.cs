@@ -68,6 +68,8 @@ namespace AC
             Console.WriteLine("0 - EXIT");
         }
 
+
+        //A PARTIR DE AQUI NO BORRAR NADA
         public static void YARYNA(ConsoleKeyInfo tecla)
         {
             string resposta;
@@ -665,6 +667,9 @@ namespace AC
                 }
             }
         }
+
+        // FINAL APARTADO YARY
+
         /// <summary>
         /// FUNCION CON LOS TOPICS DE PRESLAVA
         /// </summary>
