@@ -224,7 +224,6 @@ namespace AC
             Console.ReadKey(); 
 
             #endregion
-
         }
         public static void FERNANDO2()
         {
@@ -417,32 +416,27 @@ namespace AC
                     break;
             }
 
-            Console.WriteLine("¿Qué equipo juega como local en el Signal Iduna Parck?");
-            Console.WriteLine("a) Fc Bayern Munchen b) Girona Fc c) Borussia Dortmund d) RB Leipzig");
+            Console.WriteLine("¿En que sitio se encuentra el estadio del Everton?");
+            Console.WriteLine("a) Londres b) Paris c) Berlin d) Liverpol");
             string respuestaEntrenadores4 = Console.ReadLine();
             bool respuestaCorrecta4 = false;
             switch (respuestaEntrenadores3.ToLower())
             {
                 case "a":
                 case "b":
-                case "d":
+                case "c":
                     Console.WriteLine("TE HAS EQUIVOCADO :(");
                     Console.WriteLine("\n");
                     respuestaCorrecta1 = false;
-                    break;
+                break;
 
-                case "c":
+                case "d":
                     Console.WriteLine("RESPUESTA CORRECTA!!");
                     Console.WriteLine("\n");
                     respuestaCorrecta1 = true;
                     score++;
-                    break;
+                break;
             }
-
-
-
-
-
             #endregion
         }
     }
