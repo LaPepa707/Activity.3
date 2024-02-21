@@ -18,7 +18,7 @@ namespace AC
                     case ConsoleKey.D1:
                     case ConsoleKey.D2:
                     case ConsoleKey.D3:
-                        YARYNA();
+                        YARYNA(tecla);
                         break;
 
                     case ConsoleKey.D4:
@@ -62,13 +62,13 @@ namespace AC
             Console.WriteLine(msg);
             Console.ReadKey();
         }
-      
+
         public static void YARYNA(ConsoleKeyInfo tecla)
         {
             string resposta;
             bool respostaCorrecta = false;
             bool Final = false;
-          
+
             while (!Final)
             {
 
@@ -112,7 +112,7 @@ namespace AC
                 Console.Clear();
                 respostaCorrecta = false;
 
-               while (!respostaCorrecta) //PREGUNTA 2
+                while (!respostaCorrecta) //PREGUNTA 2
                 {
 
                     Console.WriteLine("2. ¿Qué adaptación física ayuda a los camaleones a camuflarse en su entorno?");
@@ -725,7 +725,7 @@ namespace AC
             Console.WriteLine("Napoleón Bonaparte fue...");
             Console.Write("a) un rey   b) un emperador  c) un Papa  d) un comerciante -->   ");
             respuesta = Console.ReadLine();
-                      if (respuesta == "b" || respuesta == "B")
+            if (respuesta == "b" || respuesta == "B")
             {
                 correcta = true;
             }
@@ -1084,543 +1084,541 @@ namespace AC
         #endregion
         #endregion
 
+        #region comienzaParteFernando
+        public static void FERNANDO1()
+        {
+            #region preguntasEntrenadores
+
+            int score = 0;
+
+            Console.WriteLine("¿Quién es el entrenador actual del Fc Barcelona?");
+            Console.WriteLine("a) Xavi Hernández b) Pep Guardiola c) Frank Heredia d) Carlo Ancelotti");
+
+            string respuestaEntrenadores;
+            bool respuestaCorrecta = false;
+            do
+            {
+                respuestaEntrenadores = Console.ReadLine();
+
+                switch (respuestaEntrenadores)
+                {
+                    case "a":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta = true;
+                        score++;
+                        break;
+                    case "b":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("\n");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta);
+
+            //PREGUNTA 2
+            Console.WriteLine("¿Quién es el entrenador en conseguir 3 CHAMPIONS seguidas?");
+            Console.WriteLine("a) Xavi Hernandez b) Zinedine Zidane c) Mourinho d) Cholo Simeone");
+            string respuestaEntrenadores2;
+            bool respuestaCorrecta2 = false;
+            do
+            {
+                respuestaEntrenadores2 = Console.ReadLine();
+                switch (respuestaEntrenadores2)
+                {
+                    case "b":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta2 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("\n");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta2);
+
+            //PREGUNTA 3
+            Console.WriteLine("¿Quien es el entrenador actual del Real de Madrid? ");
+            Console.WriteLine("a) Lionel de Messi b) Ronald Koeman c) Carleto Anchelotti d) Jurggen Klopp");
+            string respuestaEntrenadores3;
+            bool respuestaCorrecta3 = false;
+            do
+            {
+                respuestaEntrenadores3 = Console.ReadLine();
+                switch (respuestaEntrenadores3)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta3 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("\n");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta3);
+
+            //PREGUNTA 4
+            Console.WriteLine("¿Que entrenador a jugado en el Fc Barcelona y ha sido entrenador del Real de Madrid? ");
+            Console.WriteLine("a) Pep Guardiola b) Jose Mourinho c) Thierry Henrry d) Mbappe");
+            string respuestaEntrenadores4;
+            bool respuestaCorrecta4 = false;
+            do
+            {
+                respuestaEntrenadores4 = Console.ReadLine();
+                switch (respuestaEntrenadores4)
+                {
+                    case "b":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta4 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("\n");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta4);
+
+            //PREGUNTA 5
+            Console.WriteLine("¿Cual es el entrenador actual del Sevilla Fc? ");
+            Console.WriteLine("a) Quique Sanchez Flores b) Jose Luis Mendilibar c) Julen Lopetegui d) Unai Emery");
+            string respuestaEntrenadores5;
+            bool respuestaCorrecta5 = false;
+            do
+            {
+                respuestaEntrenadores5 = Console.ReadLine();
+                switch (respuestaEntrenadores5)
+                {
+                    case "a":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta5 = true;
+                        score++;
+                    break;
+                    case "b":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("\n");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta5);
+
+            Console.WriteLine($"DE LA SECCION ENTRENADORES, HAS SACADO UNA PUNTUACION DE {score}/5");
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+            #endregion
         }
-        //Parte Preguntas Fernando
-//        #region comienzaParteFernando
-//        public static void FERNANDO1()
-//        {
-//            #region preguntasEntrenadores
+        public static void FERNANDO2()
+        {
+            #region preguntasFutbolistas
+            int score = 0;
+            int intentosFallidos = 0;
 
-//            int score = 0;
+            //PREGUNTA 1:
+            Console.WriteLine("¿Quien es el jugador con mas Balones de Oro?");
+            Console.WriteLine("a) Cristiano Ronaldo b) Ronaldinho c) Lionel de Messi d) Vini Jr");
+            string respuestaFutbolistas;
+            bool respuestaCorrecta = false;
+            do
+            {
+                respuestaFutbolistas = Console.ReadLine();
 
-//            Console.WriteLine("¿Quién es el entrenador actual del Fc Barcelona?");
-//            Console.WriteLine("a) Xavi Hernández b) Pep Guardiola c) Frank Heredia d) Carlo Ancelotti");
+                switch (respuestaFutbolistas)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            respuestaCorrecta = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta);
 
-//            string respuestaEntrenadores;
-//            bool respuestaCorrecta = false;
-//            do
-//            {
-//                respuestaEntrenadores = Console.ReadLine();
+            //PREGUNTA 2:
+            Console.WriteLine("¿Quien es el jugador mas joven en marcar en la Seleccion Española?");
+            Console.WriteLine("a) Lamine Yamal b) Ansumane Fati c) Pedri d) Sergio Ramos");
+            string respuestaFutbolistas2;
+            bool respuestaCorrecta2 = false;
+            do
+            {
+                respuestaFutbolistas2 = Console.ReadLine();
 
-//                switch (respuestaEntrenadores)
-//                {
-//                    case "a":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta = true;
-//                        score++;
-//                        break;
-//                    case "b":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("\n");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta);
+                switch (respuestaFutbolistas2)
+                {
+                    case "a":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta2 = true;
+                        score++;
+                        break;
+                    case "b":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                            respuestaCorrecta2 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta2);
 
-//            //PREGUNTA 2
-//            Console.WriteLine("¿Quién es el entrenador en conseguir 3 CHAMPIONS seguidas?");
-//            Console.WriteLine("a) Xavi Hernandez b) Zinedine Zidane c) Mourinho d) Cholo Simeone");
-//            string respuestaEntrenadores2;
-//            bool respuestaCorrecta2 = false;
-//            do
-//            {
-//                respuestaEntrenadores2 = Console.ReadLine();
-//                switch (respuestaEntrenadores2)
-//                {
-//                    case "b":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta2 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("\n");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta2);
+            //PREGUNTA 3:
+            Console.WriteLine("¿Quien fue el jugador mas caro de la historia?");
+            Console.WriteLine("a) Maradona b) Paul Pogba c) Neymar Jr d) Samuel Umtiti");
+            string respuestaFutbolistas3;
+            bool respuestaCorrecta3 = false;
+            do
+            {
+                respuestaFutbolistas3 = Console.ReadLine();
 
-//            //PREGUNTA 3
-//            Console.WriteLine("¿Quien es el entrenador actual del Real de Madrid? ");
-//            Console.WriteLine("a) Lionel de Messi b) Ronald Koeman c) Carleto Anchelotti d) Jurggen Klopp");
-//            string respuestaEntrenadores3;
-//            bool respuestaCorrecta3 = false;
-//            do
-//            {
-//                respuestaEntrenadores3 = Console.ReadLine();
-//                switch (respuestaEntrenadores3)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta3 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("\n");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta3);
+                switch (respuestaFutbolistas3)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta3 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                            respuestaCorrecta3 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta3);
 
-//            //PREGUNTA 4
-//            Console.WriteLine("¿Que entrenador a jugado en el Fc Barcelona y ha sido entrenador del Real de Madrid? ");
-//            Console.WriteLine("a) Pep Guardiola b) Jose Mourinho c) Thierry Henrry d) Mbappe");
-//            string respuestaEntrenadores4;
-//            bool respuestaCorrecta4 = false;
-//            do
-//            {
-//                respuestaEntrenadores4 = Console.ReadLine();
-//                switch (respuestaEntrenadores4)
-//                {
-//                    case "b":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta4 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("\n");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta4);
+            //PREGUNTA 4:
+            Console.WriteLine("¿De estos jugadores, quien tiene mas CHAMPIONS?");
+            Console.WriteLine("a) Cristiano Ronaldo b) Sergio Ramos c) Neymar Jr d) Mbappé");
+            string respuestaFutbolistas4;
+            bool respuestaCorrecta4 = false;
+            do
+            {
+                respuestaFutbolistas4 = Console.ReadLine();
 
-//            //PREGUNTA 5
-//            Console.WriteLine("¿Cual es el entrenador actual del Sevilla Fc? ");
-//            Console.WriteLine("a) Quique Sanchez Flores b) Jose Luis Mendilibar c) Julen Lopetegui d) Unai Emery");
-//            string respuestaEntrenadores5;
-//            bool respuestaCorrecta5 = false;
-//            do
-//            {
-//                respuestaEntrenadores5 = Console.ReadLine();
-//                switch (respuestaEntrenadores5)
-//                {
-//                    case "a":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta5 = true;
-//                        score++;
-//                    //break;
-//                    case "b":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("\n");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta5);
+                switch (respuestaFutbolistas4)
+                {
+                    case "a":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta4 = true;
+                        score++;
+                        break;
+                    case "b":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                            respuestaCorrecta4 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta4);
 
-//            Console.WriteLine($"DE LA SECCION ENTRENADORES, HAS SACADO UNA PUNTUACION DE {score}/5");
-//            Console.WriteLine("Presiona cualquier tecla para salir...");
-//            Console.ReadKey();
-//            #endregion
-//        }
-//        public static void FERNANDO2()
-//        {
-//            #region preguntasFutbolistas
-//            int score = 0;
-//            int intentosFallidos = 0;
+            //PREGUNTA 5:
+            Console.WriteLine("¿Que jugador, jugo en la Juventus y en el Manchester United?");
+            Console.WriteLine("a) Ousmane Dembelé b) Bellingham c) Paul Pogba d) Amadu Onana");
+            string respuestaFutbolistas5;
+            bool respuestaCorrecta5 = false;
+            do
+            {
+                respuestaFutbolistas5 = Console.ReadLine();
 
-//            //PREGUNTA 1:
-//            Console.WriteLine("¿Quien es el jugador con mas Balones de Oro?");
-//            Console.WriteLine("a) Cristiano Ronaldo b) Ronaldinho c) Lionel de Messi d) Vini Jr");
-//            string respuestaFutbolistas;
-//            bool respuestaCorrecta = false;
-//            do
-//            {
-//                respuestaFutbolistas = Console.ReadLine();
+                switch (respuestaFutbolistas5)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta5 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                            respuestaCorrecta5 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta5);
 
-//                switch (respuestaFutbolistas)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            respuestaCorrecta = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta);
+            Console.WriteLine($"DE LA SECCION 'FUTBOLISTAS', HAS SACADO UNA PUNTUACION DE [{score}/5]");
+            //Console.Clear();
+            Console.WriteLine("\n");
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+            #endregion
+        }
+        public static void FERNANDO3()
+        {
+            #region preguntasEstadios
+            int score = 0;
+            int intentosFallidos = 0;
 
-//            //PREGUNTA 2:
-//            Console.WriteLine("¿Quien es el jugador mas joven en marcar en la Seleccion Española?");
-//            Console.WriteLine("a) Lamine Yamal b) Ansumane Fati c) Pedri d) Sergio Ramos");
-//            string respuestaFutbolistas2;
-//            bool respuestaCorrecta2 = false;
-//            do
-//            {
-//                respuestaFutbolistas2 = Console.ReadLine();
+            //PREGUNTA 1
+            Console.WriteLine("¿Como se llama el estadio del Real de Madrid?");
+            Console.WriteLine("a) Santiago Bernanbeu b) Camp Nou c) Wanda Metropolitano d) Old Trafford");
+            string respuestaEstadios1;
+            bool respuestaCorrecta1 = false;
+            do
+            {
+                respuestaEstadios1 = Console.ReadLine();
 
-//                switch (respuestaFutbolistas2)
-//                {
-//                    case "a":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta2 = true;
-//                        score++;
-//                        break;
-//                    case "b":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                            respuestaCorrecta2 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta2);
+                switch (respuestaEstadios1)
+                {
+                    case "a":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta1 = true;
+                        score++;
+                        break;
+                    case "b":
+                    case "c":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            respuestaCorrecta1 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta1);
 
-//            //PREGUNTA 3:
-//            Console.WriteLine("¿Quien fue el jugador mas caro de la historia?");
-//            Console.WriteLine("a) Maradona b) Paul Pogba c) Neymar Jr d) Samuel Umtiti");
-//            string respuestaFutbolistas3;
-//            bool respuestaCorrecta3 = false;
-//            do
-//            {
-//                respuestaFutbolistas3 = Console.ReadLine();
+            //PREGUNTA2
+            Console.WriteLine("¿Donde se encuentra el estadio del Real Betis Fc?");
+            Console.WriteLine("a) Betis b) Barcelona c) Sevilla d) Madrid");
+            string respuestaEstadios2;
+            bool respuestaCorrecta2 = false;
+            do
+            {
+                respuestaEstadios2 = Console.ReadLine();
 
-//                switch (respuestaFutbolistas3)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta3 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                            respuestaCorrecta3 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta3);
+                switch (respuestaEstadios2)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta2 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            respuestaCorrecta2 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta2);
 
-//            //PREGUNTA 4:
-//            Console.WriteLine("¿De estos jugadores, quien tiene mas CHAMPIONS?");
-//            Console.WriteLine("a) Cristiano Ronaldo b) Sergio Ramos c) Neymar Jr d) Mbappé");
-//            string respuestaFutbolistas4;
-//            bool respuestaCorrecta4 = false;
-//            do
-//            {
-//                respuestaFutbolistas4 = Console.ReadLine();
+            //PREGUNTA 3
+            Console.WriteLine("¿Qué equipo juega como local en el estadio Signal Iduna Parck?");
+            Console.WriteLine("a) Fc Bayern Munchen b) Girona Fc c) Borussia Dortmund d) RB Leipzig");
+            string respuestaEstadios3;
+            bool respuestaCorrecta3 = false;
+            do
+            {
+                respuestaEstadios3 = Console.ReadLine();
 
-//                switch (respuestaFutbolistas4)
-//                {
-//                    case "a":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta4 = true;
-//                        score++;
-//                        break;
-//                    case "b":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                            respuestaCorrecta4 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta4);
+                switch (respuestaEstadios3)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta3 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            respuestaCorrecta3 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta3);
 
-//            //PREGUNTA 5:
-//            Console.WriteLine("¿Que jugador, jugo en la Juventus y en el Manchester United?");
-//            Console.WriteLine("a) Ousmane Dembelé b) Bellingham c) Paul Pogba d) Amadu Onana");
-//            string respuestaFutbolistas5;
-//            bool respuestaCorrecta5 = false;
-//            do
-//            {
-//                respuestaFutbolistas5 = Console.ReadLine();
+            //PREGUNTA 4
+            Console.WriteLine("¿En que sitio se encuentra el estadio del Everton?");
+            Console.WriteLine("a) Londres b) Paris c) Berlin d) Liverpol");
+            string respuestaEstadios4;
+            bool respuestaCorrecta4 = false;
+            do
+            {
+                respuestaEstadios4 = Console.ReadLine();
 
-//                switch (respuestaFutbolistas5)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta5 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                            respuestaCorrecta5 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta5);
+                switch (respuestaEstadios4)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta4 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            respuestaCorrecta4 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta4);
 
-//            Console.WriteLine($"DE LA SECCION 'FUTBOLISTAS', HAS SACADO UNA PUNTUACION DE [{score}/5]");
-//            //Console.Clear();
-//            Console.WriteLine("\n");
-//            Console.WriteLine("Presiona cualquier tecla para salir...");
-//            Console.ReadKey();
-//            #endregion
-//        }
-//        public static void FERNANDO3()
-//        {
-//            #region preguntasEstadios
-//            int score = 0;
-//            int intentosFallidos = 0;
+            //PREGUNTA 5
+            Console.WriteLine("¿Que otro nombre recibe San Mamés, el estadio del Athletic Club?");
+            Console.WriteLine("a) El Castillo b) La Muralla c) La Catedral d) La Iglesia");
+            string respuestaEstadios5;
+            bool respuestaCorrecta5 = false;
+            do
+            {
+                respuestaEstadios5 = Console.ReadLine();
 
-//            //PREGUNTA 1
-//            Console.WriteLine("¿Como se llama el estadio del Real de Madrid?");
-//            Console.WriteLine("a) Santiago Bernanbeu b) Camp Nou c) Wanda Metropolitano d) Old Trafford");
-//            string respuestaEstadios1;
-//            bool respuestaCorrecta1 = false;
-//            do
-//            {
-//                respuestaEstadios1 = Console.ReadLine();
+                switch (respuestaEstadios5)
+                {
+                    case "c":
+                        Console.WriteLine("¡RESPUESTA CORRECTA!");
+                        Console.WriteLine("\n");
+                        respuestaCorrecta5 = true;
+                        score++;
+                        break;
+                    case "a":
+                    case "b":
+                    case "d":
+                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
+                        Console.WriteLine("Por favor, intenta de nuevo.");
+                        intentosFallidos++;
+                        if (intentosFallidos >= 3)
+                        {
+                            Console.Clear();
+                            respuestaCorrecta5 = true; // Termina el bucle si excede los dos intentos fallidos
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
+                        break;
+                }
+            } while (!respuestaCorrecta5);
 
-//                switch (respuestaEstadios1)
-//                {
-//                    case "a":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta1 = true;
-//                        score++;
-//                        break;
-//                    case "b":
-//                    case "c":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            respuestaCorrecta1 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta1);
-
-//            //PREGUNTA2
-//            Console.WriteLine("¿Donde se encuentra el estadio del Real Betis Fc?");
-//            Console.WriteLine("a) Betis b) Barcelona c) Sevilla d) Madrid");
-//            string respuestaEstadios2;
-//            bool respuestaCorrecta2 = false;
-//            do
-//            {
-//                respuestaEstadios2 = Console.ReadLine();
-
-//                switch (respuestaEstadios2)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta2 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            respuestaCorrecta2 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta2);
-
-//            //PREGUNTA 3
-//            Console.WriteLine("¿Qué equipo juega como local en el estadio Signal Iduna Parck?");
-//            Console.WriteLine("a) Fc Bayern Munchen b) Girona Fc c) Borussia Dortmund d) RB Leipzig");
-//            string respuestaEstadios3;
-//            bool respuestaCorrecta3 = false;
-//            do
-//            {
-//                respuestaEstadios3 = Console.ReadLine();
-
-//                switch (respuestaEstadios3)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta3 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            respuestaCorrecta3 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta3);
-
-//            //PREGUNTA 4
-//            Console.WriteLine("¿En que sitio se encuentra el estadio del Everton?");
-//            Console.WriteLine("a) Londres b) Paris c) Berlin d) Liverpol");
-//            string respuestaEstadios4;
-//            bool respuestaCorrecta4 = false;
-//            do
-//            {
-//                respuestaEstadios4 = Console.ReadLine();
-
-//                switch (respuestaEstadios4)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta4 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            respuestaCorrecta4 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta4);
-
-//            //PREGUNTA 5
-//            Console.WriteLine("¿Que otro nombre recibe San Mamés, el estadio del Athletic Club?");
-//            Console.WriteLine("a) El Castillo b) La Muralla c) La Catedral d) La Iglesia");
-//            string respuestaEstadios5;
-//            bool respuestaCorrecta5 = false;
-//            do
-//            {
-//                respuestaEstadios5 = Console.ReadLine();
-
-//                switch (respuestaEstadios5)
-//                {
-//                    case "c":
-//                        Console.WriteLine("¡RESPUESTA CORRECTA!");
-//                        Console.WriteLine("\n");
-//                        respuestaCorrecta5 = true;
-//                        score++;
-//                        break;
-//                    case "a":
-//                    case "b":
-//                    case "d":
-//                        Console.WriteLine("¡TE HAS EQUIVOCADO! :(");
-//                        Console.WriteLine("Por favor, intenta de nuevo.");
-//                        intentosFallidos++;
-//                        if (intentosFallidos >= 3)
-//                        {
-//                            Console.Clear();
-//                            respuestaCorrecta5 = true; // Termina el bucle si excede los dos intentos fallidos
-//                        }
-//                        break;
-//                    default:
-//                        Console.WriteLine("Opción no válida. Por favor, ingresa a, b, c o d.");
-//                        break;
-//                }
-//            } while (!respuestaCorrecta5);
-
-//            Console.WriteLine($"DE LA SECCION 'ESTADIOS', HAS SACADO UNA PUNTUACION DE [{score}/5]");
-//            //Console.Clear();
-//            Console.WriteLine("\n");
-//            Console.WriteLine("Presiona cualquier tecla para salir...");
-//            Console.ReadKey();
-//            #endregion
-//        }
-//        #endregion
-//    }
-//}
+            Console.WriteLine($"DE LA SECCION 'ESTADIOS', HAS SACADO UNA PUNTUACION DE [{score}/5]");
+            //Console.Clear();
+            Console.WriteLine("\n");
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+            #endregion
+        }
+        #endregion
+    }
+}
